@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import "tailwindcss";
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap');
+
+/* Fix the font-face path */
+@font-face {
+  font-family: "The Mighty Naile";
+  src: url("/assets/fonts/the-mighty-naile.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Define Theme Colors */
+:root {
+  --primary-color: #3A5EFF;  /* Deep Blue */
+  --secondary-color: #000000; /* Urban Black */
+  --accent-color: #FFD700;  /* Gold/Yellow */
+  --text-color: #FFFFFF; /* White */
+  --graffiti-color: #ff00ff; /* Neon Pink/Purple */
+  --title-font: "The Mighty Naile", sans-serif;
+}
+
+/* Apply Base Styles */
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  padding-top: 90px; /* Ensures content is not hidden under fixed header */
+}
+
+/* HEADER STYLES */
+header {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+  padding: 12px 16px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(8px); /* Blur for clarity */
+}
+
+/* Campaign Title */
+header h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0px 0px 8px rgba(58, 94, 255, 0.7);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+header h1:hover {
+  text-shadow: 0px 0px 15px rgba(255, 215, 0, 0.9);
+  transform: scale(1.05);
+}
+
+/* Navigation Links */
+nav a {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Ensures visibility */
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  color: var(--accent-color);
+}
+
+/* LOGO STYLES */
+header img {
+  max-height: 40px;
+  object-fit: contain;
+}
+
+/* MOBILE MENU BUTTON */
+button {
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* BUTTON STYLES */
+button {
+  font-family: var(--title-font);
+  background: linear-gradient(45deg, var(--primary-color), #1F3FEA);
+  color: var(--text-color);
+  padding: 14px 28px;
+  border-radius: 50px; /* Fully Rounded */
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
+  display: inline-block;
+}
+
+/* Hover Effect */
+button:hover {
+  background: var(--graffiti-color);
+  color: var(--secondary-color);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 25px rgba(255, 0, 255, 1);
+}
+
+/* Specific Button Customization */
+.hero-button {
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 1.4rem;
+}
+
+.small-button {
+  padding: 10px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+}
+
+/* Hide Mobile Menu Button on Larger Screens */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Background Slideshow */
+.background-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Background Images - Crossfade Effect */
+.background-slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Make the Active Image Visible */
+.background-slideshow img:first-child {
+  opacity: 1;
+}
+
+/* Background Overlay for Readability */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* TRANSPARENT SECTIONS */
+section {
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+  backdrop-filter: blur(8px); /* Blur for readability */
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Ensure Text Remains Readable */
+section h1, section h2, section p {
+  color: var(--text-color);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Improves contrast */
+}
+
+/* FOOTER - TRANSPARENT */
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
