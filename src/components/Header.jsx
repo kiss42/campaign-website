@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import logo from "../assets/logo.png"; // Import the logo
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
       {/* Logo & Candidate Name */}
       <div className="flex items-center space-x-4">
         <img 
-          src="/src/assets/logo.png" 
+          src={logo} 
           alt="Campaign Logo" 
           className="h-40 md:h-52 w-auto object-contain"
         />
