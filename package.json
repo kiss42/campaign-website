@@ -1,9 +1,10 @@
+
 {
   "name": "ladyt2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kiss42.github.io/campaign-website/",
+  "homepage": "https://www.1voice216forwitcher.org/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
