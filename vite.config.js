@@ -4,5 +4,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: '/campaign-website/', // This ensures asset paths resolve correctly on GitHub Pages
+  base: '/', // This ensures asset paths resolve correctly on GitHub Pages
 })
